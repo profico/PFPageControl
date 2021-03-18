@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PFPageControl
 
 class ViewController: UIViewController {
 

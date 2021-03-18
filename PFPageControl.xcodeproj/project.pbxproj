@@ -16,6 +16,11 @@
 		5885B94D260414670027EE52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5885B94B260414670027EE52 /* Main.storyboard */; };
 		5885B94F260414690027EE52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5885B94E260414690027EE52 /* Assets.xcassets */; };
 		5885B952260414690027EE52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5885B950260414690027EE52 /* LaunchScreen.storyboard */; };
+		5885B95B260416800027EE52 /* PageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885B95A260416800027EE52 /* PageItem.swift */; };
+		5885B964260416B20027EE52 /* ImageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885B963260416B20027EE52 /* ImageItemView.swift */; };
+		5885B96C260417A40027EE52 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885B96B260417A40027EE52 /* DotView.swift */; };
+		5885B974260417D40027EE52 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885B973260417D40027EE52 /* BackgroundView.swift */; };
+		5885B979260418020027EE52 /* PFPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885B978260418020027EE52 /* PFPageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		5885B94E260414690027EE52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5885B951260414690027EE52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5885B953260414690027EE52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5885B95A260416800027EE52 /* PageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItem.swift; sourceTree = "<group>"; };
+		5885B963260416B20027EE52 /* ImageItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItemView.swift; sourceTree = "<group>"; };
+		5885B96B260417A40027EE52 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		5885B973260417D40027EE52 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		5885B978260418020027EE52 /* PFPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,10 @@
 		5885B925260413D70027EE52 /* PFPageControl */ = {
 			isa = PBXGroup;
 			children = (
+				5885B95F260416860027EE52 /* Views */,
 				5885B926260413D70027EE52 /* PFPageControl.h */,
 				5885B927260413D70027EE52 /* Info.plist */,
+				5885B978260418020027EE52 /* PFPageControl.swift */,
 			);
 			path = PFPageControl;
 			sourceTree = "<group>";
@@ -121,6 +133,17 @@
 				5885B953260414690027EE52 /* Info.plist */,
 			);
 			path = PFPageControlExamples;
+			sourceTree = "<group>";
+		};
+		5885B95F260416860027EE52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5885B95A260416800027EE52 /* PageItem.swift */,
+				5885B963260416B20027EE52 /* ImageItemView.swift */,
+				5885B96B260417A40027EE52 /* DotView.swift */,
+				5885B973260417D40027EE52 /* BackgroundView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +224,7 @@
 				TargetAttributes = {
 					5885B922260413D70027EE52 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					5885B92B260413D80027EE52 = {
 						CreatedOnToolsVersion = 12.4;
@@ -262,6 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5885B964260416B20027EE52 /* ImageItemView.swift in Sources */,
+				5885B95B260416800027EE52 /* PageItem.swift in Sources */,
+				5885B974260417D40027EE52 /* BackgroundView.swift in Sources */,
+				5885B96C260417A40027EE52 /* DotView.swift in Sources */,
+				5885B979260418020027EE52 /* PFPageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +467,7 @@
 		5885B938260413D80027EE52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -453,6 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.profi.PFPageControl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,6 +492,7 @@
 		5885B939260413D80027EE52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -484,6 +516,7 @@
 		5885B93B260413D80027EE52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PFPageControlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,6 +534,7 @@
 		5885B93C260413D80027EE52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PFPageControlTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
