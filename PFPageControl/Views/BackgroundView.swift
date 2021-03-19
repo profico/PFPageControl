@@ -10,7 +10,11 @@ import UIKit
 class BackgroundView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.systemBackground.withAlphaComponent(0.5)
+        if #available(iOS 13.0, *) {
+            backgroundColor = UIColor.systemBackground.withAlphaComponent(0.5)
+        } else {
+            backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        }
     }
     
     override var frame: CGRect {

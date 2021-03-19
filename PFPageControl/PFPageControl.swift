@@ -30,7 +30,7 @@ public final class PFPageControl: UIView {
     public var allowsContinuousInteraction: Bool = true
     
     /// The background color of the background view. Default is systemBackground with 0.5 alpha.
-    public var backgroundViewColor: UIColor = UIColor.systemBackground.withAlphaComponent(0.5) {
+    public var backgroundViewColor: UIColor = UIColor.white.withAlphaComponent(0.5) {
         didSet {
             backgroundView.backgroundColor = backgroundViewColor
         }
