@@ -5,6 +5,8 @@
 
 PFPageControl is a page control inspired by the iOS 14 UIPageControl that you can use in your < iOS 14 projects. It comes with some extra customizability options. 
 
+![screenshot](Screenshots/ss.png)
+
 ## Requirements
 
 -   Xcode 12.
