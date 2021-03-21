@@ -1,6 +1,6 @@
 # PFPageControl
 
-![Version](https://img.shields.io/badge/pod-1.0.0-green)
+![Version](https://img.shields.io/badge/pod-1.1.0-green)
 ![Platform](https://img.shields.io/badge/platform-ios-lightgrey)
 
 PFPageControl is a page control inspired by the iOS 14 UIPageControl that you can use in your < iOS 14 projects. It comes with some extra customizability options. 
@@ -70,7 +70,8 @@ That's it, you are ready to start using PFPageControl!
 
 | delegate method | description |
 |--|--|
-| **x** | y |
+| **didTapPreviousPage()** | Called when the user taps on the previous page |
+| **didTapNextPage()** | Called when the user taps on the next page |
 
 ## Author
 
