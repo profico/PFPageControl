@@ -7,9 +7,17 @@
 
 import UIKit
 
+@objc public protocol PFPageControlDelegate: class {
+    @objc optional func didTapPreviousPage()
+    @objc optional func didTapNextPage()
+}
+
 public final class PFPageControl: UIView {
     
     //MARK: - Public vars
+    
+    /// PFPageControl delegate
+    public weak var delegate:PFPageControlDelegate?
     
     /// The tint color for non-selected indicators. Default is white with 0.45 alpha.
     public var pageIndicatorTintColor = UIColor.white.withAlphaComponent(0.45) { didSet { updateColors() } }
@@ -203,12 +211,14 @@ public final class PFPageControl: UIView {
     public func nextPage() {
         currentPage += 1
         lastDirection = .right
+        delegate?.didTapNextPage?()
     }
     
     /// currentPage -= 1
     public func prevPage() {
         currentPage -= 1
         lastDirection = .left
+        delegate?.didTapPreviousPage?()
     }
     
     /// Sets tintColor for specific index.
