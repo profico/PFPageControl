@@ -374,8 +374,6 @@ public final class PFPageControl: UIView {
             } else {
                 dot.changeColor(color: pageIndicatorTintColor, withAnimation: true)
             }
-            
-           
         }
     }
     

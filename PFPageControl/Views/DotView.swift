@@ -25,11 +25,7 @@ class DotView: PageItem {
     
     override func changeColor(color: UIColor, withAnimation: Bool = false) {
         
-        if withAnimation {
-            UIView.animate(withDuration: 0.25) {
-                self.backgroundColor = color
-            }
-        } else {
+        UIView.animate(withDuration: withAnimation ? 0.25 : 0) {
             self.backgroundColor = color
         }
         

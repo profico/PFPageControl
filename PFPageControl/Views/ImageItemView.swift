@@ -24,11 +24,7 @@ class ImageView: PageItem {
     
     override func changeColor(color: UIColor, withAnimation: Bool = false) {
         
-        if withAnimation {
-            UIView.animate(withDuration: 0.25) {
-                self.imageView.tintColor = color
-            }
-        } else {
+        UIView.animate(withDuration: withAnimation ? 0.25 : 0) {
             self.imageView.tintColor = color
         }
         
